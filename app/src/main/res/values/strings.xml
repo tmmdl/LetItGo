@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Göndər Getsin</string>
+    <string name="message">Təşəkkür edirik</string>
+    <string name="cmt_field">Özünüzlə nə apara bilərsiniz</string>
+    <string name="ok_btn">OK</string>
+    <string name="cnt_name_field">Adınız</string>
+    <string name="cnt_phone_field">Telefon</string>
+    <string name="cnt_mail_field">E-Mail</string>
+    <string name="date_info_text">Zəhmət olmasa tarixi seçin</string>
+    <string name="main_send_btn">Göndərirəm</string>
+    <string name="main_go_btn">Gedirəm</string>
+    <string name="main_to_aze_btn">Azərbaycana</string>
+    <string name="main_to_ger_btn">Almaniyaya</string>
+    <string name="snd_date_btn">Bu vaxt</string>
+    <string name="snd_all_btn">Hamısı</string>
+    <string name="cnt_cmt">Qeyd</string>
+    <string name="cnt_destination">Gedir</string>
+</resources>
