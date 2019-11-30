@@ -5,7 +5,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/colorPrimary"
+>
 
     <EditText
             android:id="@+id/contact_name_field"
@@ -42,7 +44,7 @@
             android:layout_height="wrap_content"
             android:text="@string/ok_btn"
             android:textAllCaps="false"
-            android:textColor="#000000"
+            android:textColor="#345CB4"
             android:background="@drawable/button_background"
     >
     </Button>
