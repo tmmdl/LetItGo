@@ -17,4 +17,7 @@ interface ServiceUtils {
 
     @GET("travellers")
     fun read(@Query("destination")destination: String): Call<ArrayList<Traveller>>
+
+    @GET("seeker")
+    fun readSeekers(@Query("destination")destination: String): Call<ArrayList<Traveller>>
 }

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Göndər Getsin</string>
     <string name="message">Təşəkkür edirik</string>
-    <string name="cmt_field">Özünüzlə nə apara bilərsiniz</string>
+    <string name="cmt_field">Qeydiniz varsa əlavə edin</string>
     <string name="ok_btn">OK</string>
     <string name="cnt_name_field">Adınız</string>
     <string name="cnt_phone_field">Telefon</string>
@@ -12,7 +12,11 @@
     <string name="main_to_aze_btn">Azərbaycana</string>
     <string name="main_to_ger_btn">Almaniyaya</string>
     <string name="snd_date_btn">Bu vaxt</string>
-    <string name="snd_all_btn">Hamısı</string>
+    <string name="snd_all_btn">Gedənlər</string>
     <string name="cnt_cmt">Qeyd</string>
     <string name="cnt_destination">Gedir</string>
+    <string name="add_advert">Azərbaycana</string>
+    <string name="snd_advert_btn">Elan yerləşdir</string>
+    <string name="trvl_cnt_btn">Bu vaxt</string>
+    <string name="trvl_seeker_btn">Göndərənlər</string>
 </resources>

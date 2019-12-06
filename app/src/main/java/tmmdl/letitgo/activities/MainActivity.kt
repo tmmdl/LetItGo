@@ -58,11 +58,11 @@ class MainActivity : AppCompatActivity() {
             toGerButton.isClickable = true
             toAzeButton.setOnClickListener {
                 destination = getString(R.string.main_to_aze_btn)
-                goToDate()
+                goToTraveller()
             }
             toGerButton.setOnClickListener {
                 destination = getString(R.string.main_to_ger_btn)
-                goToDate()
+                goToTraveller()
             }
         }
     }
@@ -85,12 +85,19 @@ class MainActivity : AppCompatActivity() {
         startActivityForResult(toDateIntent,1) //TODO requestCode?
     }
 
+    private fun goToTraveller(){
+        val toTravellerIntent = Intent(this, TravellerActivity::class.java)
+        startActivity(toTravellerIntent)
+    }
+
     companion object{
         var name: String = ""
         var date: String = ""
         var destination: String = ""
         var comment: String = ""
         var contact: String = ""
+        var mail: String = ""
+        var seeker: Boolean = false
     }
 
 }

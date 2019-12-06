@@ -35,7 +35,9 @@ class CommentActivity : AppCompatActivity() {
                 MainActivity.destination,
                 MainActivity.date,
                 MainActivity.contact,
-                MainActivity.comment
+                MainActivity.comment,
+                MainActivity.mail,
+                MainActivity.seeker
             )
 
             val createClient = ServiceBuilder.buildService(ServiceUtils::class.java)
@@ -53,8 +55,8 @@ class CommentActivity : AppCompatActivity() {
                     Toast.makeText(applicationContext, "exception", Toast.LENGTH_LONG).show()
                 }
             })
-            showInfo()
-            Timer().schedule(3000){
+            //showInfo() //TODO causes an exception. replace with popup window
+            Timer().schedule(2000){
                 toMain()
             }
         }
@@ -74,6 +76,7 @@ class CommentActivity : AppCompatActivity() {
     private fun toMain(){
 
         val toMainIntent = Intent(this, MainActivity::class.java)
+        toMainIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(toMainIntent)
     }
 }

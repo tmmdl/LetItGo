@@ -11,6 +11,7 @@ class SenderActivity : AppCompatActivity() {
 
     private lateinit var toDateButton: Button
     private lateinit var showAllButton: Button
+    private lateinit var addAdvertButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +28,12 @@ class SenderActivity : AppCompatActivity() {
             toTravellersList()
             Log.i("@tmmdl", "senderactivity - showAllbutton, after intent")
         }
+
+        addAdvertButton = findViewById(R.id.add_advert)
+        addAdvertButton.setOnClickListener{
+            goToAdvert()
+        }
+
     }
 
     private fun goToDate(){
@@ -45,5 +52,10 @@ class SenderActivity : AppCompatActivity() {
 
         val toTravellersListIntent = Intent(this, TravellersListActivity::class.java)
         startActivityForResult(toTravellersListIntent, 1)
+    }
+
+    private fun goToAdvert(){
+        val toAdvertIntent = Intent(this, ContactActivity::class.java)
+        startActivityForResult(toAdvertIntent, 1)
     }
 }

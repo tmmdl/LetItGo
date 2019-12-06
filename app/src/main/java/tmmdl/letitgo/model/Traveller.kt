@@ -14,18 +14,26 @@ class Traveller {
     @SerializedName("date")
     @Expose
     var date: String? = null
-    @SerializedName("contact")
+    @SerializedName("phone")
     @Expose
-    var contact: String? = null
+    var phone: String? = null
+    @SerializedName("mail")
+    @Expose
+    var mail: String? = null
     @SerializedName("comment")
     @Expose
     var comment: String? = null
+    @SerializedName("seeker")
+    @Expose
+    var seeker: Boolean? = null
 
-    constructor(name: String, destination: String, date: String, contact: String, comment: String){
+    constructor(name: String, destination: String, date: String, phone: String, comment: String, mail: String, seeker: Boolean){
         this.name = name
         this.destination = destination
         this.date = date
-        this.contact = contact
+        this.phone = phone
+        this.mail = mail
         this.comment = comment
+        this.seeker = seeker
     }
 }

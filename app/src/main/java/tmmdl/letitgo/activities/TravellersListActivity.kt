@@ -32,6 +32,10 @@ class TravellersListActivity : AppCompatActivity() {
         if (activityName == DateActivity::class.java.name) {
             callRequest = createClient.read(MainActivity.date, MainActivity.destination)
         }
+        if (activityName == TravellerActivity::class.java.name) {
+            callRequest = createClient.readSeekers(MainActivity.destination)
+            Log.i("@tmmdl", "you come from TravellerActivity to place an advert")
+        }
 
         callRequest.enqueue(object : Callback<ArrayList<Traveller>> {
             override fun onResponse(call: Call<ArrayList<Traveller>>, response: Response<ArrayList<Traveller>>) {
@@ -66,7 +70,7 @@ class TravellersListActivity : AppCompatActivity() {
 
         Log.i("@tmmdl", comment)
 
-        val dialogMessage = "${traveller.contact} \n${comment}: ${traveller.comment} \n${goesTo}: ${traveller.destination}"
+        val dialogMessage = "${traveller.phone} \n${comment}: ${traveller.comment} \n${goesTo}: ${traveller.destination}"
         val builder = AlertDialog.Builder(this)
         builder.setMessage(dialogMessage)
         builder.create().show()

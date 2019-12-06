@@ -15,6 +15,11 @@ class ContactActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contact)
+        val activityName = callingActivity!!.className
+
+        if (activityName == SenderActivity::class.java.name){
+            MainActivity.seeker = true
+        }
 
         contactButton = findViewById(R.id.contact_button)
         contactButton.setOnClickListener {
