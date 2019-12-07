@@ -34,11 +34,13 @@ class CommentActivity : AppCompatActivity() {
                 MainActivity.name,
                 MainActivity.destination,
                 MainActivity.date,
-                MainActivity.contact,
+                MainActivity.phone,
                 MainActivity.comment,
                 MainActivity.mail,
                 MainActivity.seeker
             )
+
+            Log.i("@tmmdl", "commentActivity phone: ${MainActivity.phone}")
 
             val createClient = ServiceBuilder.buildService(ServiceUtils::class.java)
             val callRequest = createClient.create(traveller)
@@ -66,7 +68,7 @@ class CommentActivity : AppCompatActivity() {
     private fun showInfo() {
 
         val dialogMessage = getString(R.string.message)
-        val msg = MainActivity.name + " " + MainActivity.destination + " " + MainActivity.date + " " + MainActivity.contact
+        val msg = MainActivity.name + " " + MainActivity.destination + " " + MainActivity.date + " " + MainActivity.phone
         val builder = AlertDialog.Builder(this)
         builder.setMessage(dialogMessage)
         builder.create().show()

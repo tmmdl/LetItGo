@@ -26,17 +26,13 @@ class DateActivity : AppCompatActivity() {
             MainActivity.date = ""+ dayOfMonth + "/" + (month + 1) + "/" + year
             Toast.makeText(this, MainActivity.date, Toast.LENGTH_LONG).show()
         }
-
         showListButton = findViewById<Button>(R.id.ok_button)
-        if (activityName == SenderActivity::class.java.name) {
-            showListButton.setOnClickListener{
-                Log.i("@tmmdl", "recyclerview")
+        showListButton.setOnClickListener{
+            if (activityName == SenderActivity::class.java.name) {
                 toTravellersList()
             }
-        }
-        if(activityName == MainActivity::class.java.name){
-            showListButton.setOnClickListener {
-                Log.i("@tmmdl", "if statement")
+            else{
+                Log.i("@tmmdl", "traveller activity: to setting contacts")
                 setContacts()
             }
         }
@@ -48,6 +44,6 @@ class DateActivity : AppCompatActivity() {
 
     private fun setContacts(){
         val toContactIntent = Intent(this, ContactActivity::class.java)
-        startActivity(toContactIntent)
+        startActivityForResult(toContactIntent, 1)
     }
 }

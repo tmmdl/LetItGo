@@ -67,10 +67,17 @@ class TravellersListActivity : AppCompatActivity() {
 
         val comment = getString(R.string.cnt_cmt)
         val goesTo = getString(R.string.cnt_destination)
+        val date = getString(R.string.cnt_date)
+        val phone = getString(R.string.cnt_phone_field)
+        val mail = getString(R.string.cnt_mail_field)
 
         Log.i("@tmmdl", comment)
 
-        val dialogMessage = "${traveller.phone} \n${comment}: ${traveller.comment} \n${goesTo}: ${traveller.destination}"
+        val dialogMessage = "${goesTo}: ${traveller.destination} \n" +
+                "${date}: ${traveller.date} \n" +
+                "${phone}: ${traveller.phone} \n" +
+                "${mail}: ${traveller.mail} \n" +
+                "${comment}: ${traveller.comment} \n"
         val builder = AlertDialog.Builder(this)
         builder.setMessage(dialogMessage)
         builder.create().show()

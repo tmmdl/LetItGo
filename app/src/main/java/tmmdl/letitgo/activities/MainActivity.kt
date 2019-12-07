@@ -95,7 +95,7 @@ class MainActivity : AppCompatActivity() {
         var date: String = ""
         var destination: String = ""
         var comment: String = ""
-        var contact: String = ""
+        var phone: String = ""
         var mail: String = ""
         var seeker: Boolean = false
     }

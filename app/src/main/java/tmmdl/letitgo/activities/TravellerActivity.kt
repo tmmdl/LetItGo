@@ -3,6 +3,7 @@ package tmmdl.letitgo.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import tmmdl.letitgo.R
 
@@ -17,7 +18,9 @@ class TravellerActivity : AppCompatActivity() {
 
         toContactButton = findViewById(R.id.trvl_cnt_btn)
         toContactButton.setOnClickListener{
-            toContact()
+            Log.i("@tmmdl", "traveller activity - go to date")
+            goToDate()
+
         }
         toSeekerButton = findViewById(R.id.trvl_seeker_btn)
         toSeekerButton.setOnClickListener{
@@ -25,10 +28,16 @@ class TravellerActivity : AppCompatActivity() {
         }
     }
 
-    private fun toContact(){
-        val toContactIntent = Intent(this, ContactActivity::class.java)
-        startActivityForResult(toContactIntent, 1)
+    private fun goToDate(){
 
+        val toDateIntent = Intent(this, DateActivity::class.java)
+        //startActivityForResult is used when you want to start a new activity and
+        // get some result back from that new activity. The result will be received
+        // only after the new activity finished it’s activity. For example, the main
+        // activity starts the second activity by using the method startActivtyForResult,
+        // the second activity started then sends back the result to the main activity,
+        // the main activity gets the result from the onActivityResult method.
+        startActivityForResult(toDateIntent,1) //TODO requestCode?
     }
 
     private fun toList(){
